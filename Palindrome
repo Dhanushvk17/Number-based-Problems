@@ -1,0 +1,71 @@
+public class Main {
+  public static int rev(int n)
+  {
+    int ans=0;
+    while(n!=0)
+    {
+      ans=ans*10+n%10;
+      n=n/10;
+    }
+    return ans;
+  }
+  
+    public static void main(String[] args) {
+      Scanner z=new Scanner(System.in);
+     int n=z.nextInt();
+      if(n==rev(n))
+        System.out.print("Palindrome");
+      else
+        System.out.print("No");
+        
+      
+  }
+}
+==================================================================================
+#include <stdio.h>
+int fun(int n)
+{
+    int ans=0;
+    while(n>0)
+    {
+        int r=n%10;
+        ans=ans*10+r;
+        n=n/10;
+    }
+    return ans;
+}
+int main() 
+{
+     int n,ans;
+     scanf("%d",&n);
+     ans=fun(n);
+     if(ans==n)
+        printf("palindrome");
+    else
+        printf("not a palindrome");
+}
+
+=============================================================================================
+
+
+import java.util.Scanner;
+class main
+{
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int n,r,ans=0,copy;
+        n=z.nextInt();
+        copy=n;
+        while(n>0)
+        {
+           r=n%10;
+            ans=ans*10+r;
+            n=n/10;
+        } 
+        if(copy==ans)
+            System.out.print("palindrome");
+        else
+            System.out.print("not a Palindrome");
+        
+    }
+}
